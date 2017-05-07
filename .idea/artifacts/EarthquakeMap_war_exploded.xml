@@ -1,0 +1,27 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="EarthquakeMap:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/EarthquakeMap_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="EarthquakeMap/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="EarthquakeMap" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="file-copy" path="$PROJECT_DIR$/../workspace/UCSDUnfoldingMaps/lib/unfolding.0.9.7-uscd.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../workspace/UCSDUnfoldingMaps/lib/core.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../workspace/UCSDUnfoldingMaps/lib/gluegen-rt-natives-windows-amd64.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../workspace/UCSDUnfoldingMaps/lib/gluegen-rt-natives-windows-i586.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../workspace/UCSDUnfoldingMaps/lib/gluegen-rt.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../workspace/UCSDUnfoldingMaps/lib/jogl-all-natives-windows-amd64.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../workspace/UCSDUnfoldingMaps/lib/jogl-all-natives-windows-i586.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../workspace/UCSDUnfoldingMaps/lib/jogl-all.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../workspace/UCSDUnfoldingMaps/lib/json4processing.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../workspace/UCSDUnfoldingMaps/lib/libTUIO.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../workspace/UCSDUnfoldingMaps/lib/log4j-1.2.15.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../workspace/UCSDUnfoldingMaps/lib/sqlite-jdbc-3.7.2.jar" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
