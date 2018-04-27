@@ -1,4 +1,4 @@
-package Sample;
+package QuakeProject;
 
 import java.util.ArrayList;
 import java.util.HashMap;

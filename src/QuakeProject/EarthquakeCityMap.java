@@ -1,4 +1,4 @@
-package Sample;
+package QuakeProject;
 
 import java.awt.*;
 import java.text.DecimalFormat;
@@ -15,17 +15,13 @@ import de.fhpotsdam.unfolding.geo.Location;
 import de.fhpotsdam.unfolding.marker.AbstractShapeMarker;
 import de.fhpotsdam.unfolding.marker.Marker;
 import de.fhpotsdam.unfolding.marker.MultiMarker;
-import de.fhpotsdam.unfolding.providers.OpenStreetMap;
+import de.fhpotsdam.unfolding.providers.Microsoft;
 import de.fhpotsdam.unfolding.ui.BarScaleUI;
 import de.fhpotsdam.unfolding.utils.MapUtils;
 import processing.core.PApplet;
 import processing.core.PFont;
 
 /**
- * EarthquakeCityMap An application with an interactive map displaying
- * earthquake data. Author: UC San Diego Intermediate Software Development MOOC
- * team
- * 
  * @author Hieratikos Date: October 1, 2016
  */
 public class EarthquakeCityMap extends PApplet {
@@ -73,10 +69,11 @@ public class EarthquakeCityMap extends PApplet {
 	int white = color(255, 255, 255);
 	int darkgray = color(100, 100, 100);
 	int tan = color(255, 250, 240);
+	int heatwave = color(255,126,95);
 
 	// The files containing city names and info and country names and info
-	private String cityFile = "Sample/city-data.json";
-	private String countryFile = "Sample/countries.geo.json";
+	private String cityFile = "QuakeProject/city-data.json";
+	private String countryFile = "QuakeProject/countries.geo.json";
 
 	// The map
 	private UnfoldingMap map;
@@ -103,31 +100,26 @@ public class EarthquakeCityMap extends PApplet {
 	// Calendar
 
 	public static void main(String[] args){
-		PApplet.main("EarthquakeCityMap");
+		PApplet.main("QuakeProject.EarthquakeCityMap");
 	}
-	public void settings(){
-	    
-    }
 	@Override
 	public void setup() {
 		keyFont = createFont("Arial Bold", FONT_SIZE);
 		size((int) bounds.getWidth(), (int) bounds.getHeight(), OPENGL);
+
 		if (offline) {
 			// map = new UnfoldingMap(this, 200, 50, 650, 600, new
 			// MBTilesMapProvider(mbTilesString));
 			// earthquakesURL = "2.5_week.atom"; // The same feed, but saved
 			// August 7, 2015
 		} else {
-			// map = new UnfoldingMap(this, 200, 50, 650, 600, new
-			// OpenStreetMap.OpenStreetMapProvider());
-			// map = new UnfoldingMap(this, mapX, mapY, width-250,
-			// height-150,new Microsoft.RoadProvider());
-			// map = new UnfoldingMap(this, mapX, mapY, width-250,
-			// height-150,new Microsoft.AerialProvider());
-			// map = new UnfoldingMap(this, mapX, mapY, width-250,
-			// height-150,new Microsoft.HybridProvider());
-			map = new UnfoldingMap(this, mapX, mapY, width - 250, height - 150,
-					new OpenStreetMap.OpenStreetMapProvider());
+			 //map = new UnfoldingMap(this, 200, 50, 650, 600, new
+			 //OpenStreetMap.OpenStreetMapProvider());
+			 map = new UnfoldingMap(this, mapX, mapY, width - 250,height - 150,new Microsoft.RoadProvider());
+			 //map = new UnfoldingMap(this, mapX, mapY, width - 250,height - 150,new Microsoft.AerialProvider());
+			 //map = new UnfoldingMap(this, mapX, mapY, width - 250,height - 150,new Microsoft.HybridProvider());
+/*            map = new UnfoldingMap(this, mapX, mapY, width - 250, height - 150, new
+            OpenStreetMap.OpenStreetMapProvider());*/
 			map.zoomToLevel(ZOOM_MIN);
 			map.setZoomRange(ZOOM_MIN, ZOOM_MAX);
 			map.setTweening(true);
@@ -163,7 +155,7 @@ public class EarthquakeCityMap extends PApplet {
 
 	@Override
 	public void draw() {
-		background(black);
+		background(heatwave);
 		map.draw();
 		addKey();
 		addBarScale();

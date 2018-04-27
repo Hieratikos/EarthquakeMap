@@ -1,4 +1,4 @@
-package Sample;
+package QuakeProject;
 
 import de.fhpotsdam.unfolding.data.PointFeature;
 import processing.core.PConstants;

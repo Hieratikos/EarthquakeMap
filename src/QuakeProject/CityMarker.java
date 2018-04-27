@@ -1,4 +1,4 @@
-package Sample;
+package QuakeProject;
 
 import de.fhpotsdam.unfolding.data.Feature;
 import de.fhpotsdam.unfolding.data.PointFeature;

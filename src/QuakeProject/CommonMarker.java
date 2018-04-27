@@ -1,4 +1,4 @@
-package Sample;
+package QuakeProject;
 
 import de.fhpotsdam.unfolding.geo.Location;
 import de.fhpotsdam.unfolding.marker.SimplePointMarker;
