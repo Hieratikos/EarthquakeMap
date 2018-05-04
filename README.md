@@ -1,3 +1,2 @@
 # EarthquakeMap
-Data Visualization exercise for a Coursera class.
-It's just an applet.
+This map is a simple data visualization project that displays real-time earthquake data from an Atom feed at the [U.S. Geological Society](https://earthquake.usgs.gov/). The map(s) come from [Unfolding Maps](http://unfoldingmaps.org/), and the legend and graphics are made with [Processing 2.0](https://processing.org/). This project was part of the coursework of a Coursera Java class called [Data Structures and Performance](https://www.coursera.org/learn/data-structures-optimizing-performance) offered by UCSD.
